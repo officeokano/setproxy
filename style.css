@@ -1,0 +1,82 @@
+@import url(http://fonts.googleapis.com/earlyaccess/notosansjapanese.css);
+* {
+    background: #eee;
+    color: #333;
+	font-family: 'Noto Sans Japanese', Arial, sans-serif;
+    text-decoration: none;
+    text-align: center;
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+}
+body {
+    overflow-y:hidden;
+}
+div {
+    position: relative;
+}
+a {
+    display: block;
+    width: 100%;
+    height: 100%:
+    position: absolute;
+    padding: 32px 0px;
+    margin: 0px 0px;
+    transition-property: color,background;
+    transition-duration: 1s;
+    -moz-transition-property: color,background;
+    -moz-transition-duration: 1s;
+    -webkit-transition-property: color,background;
+    -webkit-transition-duration: 1s;
+    border: none;
+}
+a:hover {
+    background: #ccc;
+    box-shadow: 1px 1px 6px rgba(0,0,0,0.6) inset;
+}
+a:active {
+    background: #eee;
+    transition-duration: 0s;
+}
+header,footer{
+    z-index: 9999;
+    position: fixed;
+    color: #333;
+    background: #ccf;
+    border: 0px;
+    width: 100%;
+    left: 0px;
+}
+header{
+    line-height: 36px;
+	font-size: 18px;
+    top: 0px;
+	height: 36px;
+    box-shadow: 0px 1px 6px rgba(0,0,0,0.6);
+    animation: slideDown 0.5s ease-in-out 0.3s backwards;
+}
+footer{
+    line-height: 24px;
+	font-size: 12px;
+    bottom: 0px;
+	height: 24px;
+    box-shadow: 0px -1px 6px rgba(0,0,0,0.6);
+    animation: slideUp 0.5s ease-in-out 0.3s backwards;
+}
+.inline {
+    display: inline;
+    position: relative;
+    background: inherit;
+    padding: 0px;
+}
+.submenu{
+    margin: 36px 0px 24px 0px;
+}
+@keyframes slideDown{
+	0%{top:-36px; opacity: 0;}
+	100%{top:0px; opacity: 1;}
+}
+@keyframes slideUp{
+	0%{bottom:-24px; opacity: 0;}
+	100%{bottom:0px; opacity: 1;}
+}
